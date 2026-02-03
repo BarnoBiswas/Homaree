@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================
+   THEME VARIABLES
+========================= */
+
+/* Light Theme */
+:root {
+  --primary: #3f7d5b;
+  --bg: #FAFAF7;
+  --text: #111714;
+  --text-secondary: #33664a;
+  --text-muted: #677E72;
+  --input-bg: #dce5e0;
+  --border: #dce5e0;
+  --destructive: #ef4343;
+  --focus-ring: #3f7d5b;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: #111714;
+  --text: #FAFAF7;
+  --input-bg: #1B221E;
+  --border: #2C3933;
+}
