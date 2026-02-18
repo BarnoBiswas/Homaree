@@ -1,4 +1,5 @@
 import { Feather, MaterialIcons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React from "react";
 import {
   FlatList,
@@ -108,7 +109,14 @@ export default function DishOfferCarousel({
         showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Pressable className="mr-4 w-48 rounded-2xl bg-white overflow-hidden shadow-sm">
+          <Pressable className="mr-4 w-48 rounded-2xl bg-white overflow-hidden shadow-sm"
+          onPress={() =>
+                        router.push({
+                          pathname: "/(entity)/dish/[id]",
+                          params: { id: item.id },
+                        })
+                      }
+          >
             {/* Dish Image */}
             <View className="h-40 w-full">
               <Image
